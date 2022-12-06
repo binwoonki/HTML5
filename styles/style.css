@@ -30,7 +30,7 @@ a{
 body{
   /* em. rem 단위를 사용해보기 */
   font-size: 1.4rem;
-  color:#212121;
+  color:#212121;;
   background:#ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight:400;
@@ -93,6 +93,7 @@ body{
 }
 
 .menu{
+  border-top: 2px solid currentColor;
   background: #e85e2c
     linear-gradient(
       to bottom,
@@ -101,6 +102,20 @@ body{
       #e85e2c 70%,
       #ef9126 100%
     );
+    border-radius: 0 0 5px 5px;
+    display:flow-root;
+    padding-left: 230px;
+}
+
+.sub-menu{
+  background-color:pink;
+  position:absolute;
+  display:none;
+}
+
+.menu-item{
+  background-color:aqua;
+  float:left;
 }
 
 /* background-color → 배경색
