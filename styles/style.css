@@ -237,9 +237,11 @@ body {
   background-color:coral;
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name:moveEffect;
-  animation-duration: 2000ms;
+  animation-duration: 3000ms;
   animation-fill-mode:forwards;
   display:inline-block;
+  /* position:absolute; */
+  animation-timing-function: ease-in-out;
 }
 
 /* 메인 */
