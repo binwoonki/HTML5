@@ -378,6 +378,17 @@ body {
   font-size: 13px;
 }
 
+/* 유효성 검사 배너 */
+.vaildation-list{
+  background-color: yellow;
+  margin-top:25px;
+}
+
+.vaildation-list li{
+  background-color: pink;
+  margin-top:10px;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
