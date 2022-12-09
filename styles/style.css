@@ -380,14 +380,33 @@ body {
 
 /* 유효성 검사 배너 */
 .vaildation-list{
-  background-color: yellow;
   margin-top:25px;
 }
 
+.vaildation-list a:hover,
+.vaildation-list a:focus{
+  color:red;
+}
+
 .vaildation-list li{
-  background-color: pink;
   margin-top:10px;
 }
+
+.vaildation-list a::before{
+  content: url(./images/validation_icon.png);
+  vertical-align: middle;
+}
+
+.vaildation-list a{
+  display:block;
+  border:1px solid #aaa;
+  border-radius: 30px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding:8px 15px;
+  text-align: center;
+}
+
+
 
 /* 슬로건 */
 .slogan {
