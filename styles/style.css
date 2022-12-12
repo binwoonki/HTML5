@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+<<<<<<< HEAD
 @import url(./fonts.css);
 @import url(./fontello.css);
 
@@ -23,6 +24,30 @@
 
 html {
   font-size: 10px;
+=======
+@import url(fontello.css);
+
+/* 기본 스타일 */
+
+*, 
+*::before, 
+*::after{
+  box-sizing: border-box;
+}
+
+/* 링크 스타일 */
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+/* 본문 스타일 */
+body{
+  color:#212121;
+  background:lightgoldenrodyellow;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight:400;
+>>>>>>> cfa8b1448898918498e2e867ca44c6172e09f8fc
 }
 
 /* 링크 스타일 */
@@ -55,6 +80,7 @@ body {
 }
 
 /* 헤더 */
+<<<<<<< HEAD
 .header {
   background-color:#fff;
   padding: 0 30px;
@@ -212,7 +238,50 @@ body {
 .sub-menu a:hover,
 .sub-menu a:focus{
   color:#f00;
+=======
+.header{
+  background: #fff;
+  padding:0 30px;
+  height:15vh;
+  border-radius: 0 0 15px 15px;
+>>>>>>> cfa8b1448898918498e2e867ca44c6172e09f8fc
 }
+
+.member{
+  background-color:pink;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.member a{
+  text-transform: capitalize;
+}
+
+/* :before / ::before -> first child */
+/* :after / ::after -> last child */
+
+/* 우선순위 규칙 */
+/* li (Type Select) - 1점 */
+/* .first (Class Select) - 10점 */
+/* #item (ID Select) - 100점 */
+
+/* .member -> 10점 li -> 1점 ::before -> 1점 => 12점 
+.member li::before{
+  content:':';
+}
+*/
+
+/* .member -> 10점 .first -> 10점  ::before -> 1점 => 21점 
+.member .first::before{
+  content:'';
+}
+*/
+
+/* .member li:nth-child(n + 2)::before{
+  content:':';
+} */
+
 
 /* 비주얼 */
 /* at sign rule */
@@ -298,6 +367,7 @@ body {
 }
 
 /* 메인 */
+<<<<<<< HEAD
 .main {
   background: #fff;
   min-height: 450px;
@@ -309,14 +379,29 @@ body {
 .group {
   margin: 0 15px;
   float: left;
+=======
+.main{
+  background: lightgreen;
+  min-height:450px;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:30px;
+>>>>>>> cfa8b1448898918498e2e867ca44c6172e09f8fc
 }
 
 .group1 {
   width: 250px;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> cfa8b1448898918498e2e867ca44c6172e09f8fc
 }
 
 .group2 {
   width: 380px;
+<<<<<<< HEAD
 }
 .group3 {
   width: 190px;
@@ -483,6 +568,13 @@ body {
 .cross .term-list-subject,
 .cross .term-list-brief{
   float:left;
+=======
+}
+
+.group3{
+  background-color: gold;
+  width:190px;
+>>>>>>> cfa8b1448898918498e2e867ca44c6172e09f8fc
 }
 
 .cross .term-list-thumbnail{
@@ -618,4 +710,4 @@ body {
 .footer-inner {
   background: silver;
   height: 15vh;
-}
+}}}}
