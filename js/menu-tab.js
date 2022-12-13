@@ -26,7 +26,7 @@ $( document ).ready(function() {
     e.preventDefault();
     // 클릭한 tab 요소에 aria-selected=true로 지정하고 
     // 형제요소중에 자신 tab 이외의 나머지 tab 요소들을 aria-selected=false로 지정한다.
-    $(this).attr('aria-selected', true).siblings().attr('aria-selected', false);
+    $(this).attr('aria-select', true).siblings().attr('aria-select', false);
     $(this).attr('class', 'tab is-select').siblings().attr('class', 'tab');
     
     var selectedId = "#"+$(this).attr('aria-controls');
