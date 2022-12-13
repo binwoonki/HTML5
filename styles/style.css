@@ -2,6 +2,7 @@
 @import url(./reset.css);
 @import url(./fonts.css);
 @import url(./fontello.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 
@@ -657,6 +658,10 @@ body {
   text-align: center;
 }
 
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #ccc;
+}
+
 .news-more {
   position: absolute;
   top: -8px;
@@ -664,8 +669,57 @@ body {
   padding: 8px;
 }
 
+/* 신규 이벤트 및 관련 사이트 */
 
+.event{
+  border-bottom: 1px solid #aaa;
 
+}
+
+.event-button-wrapper{
+  background-color: yellow;
+  height: 20px;
+  overflow: hidden;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  gap:5px;
+}
+
+.event-button{
+  width: 19px;
+  height: 18px;
+  border:0;
+  padding:18px 0px 0px 0px;
+  background:url(images/back_forward.png) no-repeat;
+}
+
+.event-button-next{
+  background-position:-36px 0px;
+}
+
+.event-button:focus{
+  outline-offset: -2px;
+}
+
+.event-thumbnail,
+.event-brief{
+  margin: 10px 0;
+
+}
+
+.event-brief{
+  line-height: 1.5;
+}
+
+.related{
+  margin-top:10px;
+}
+
+.related-list{
+  background-color:#fff;
+  margin-top: 10px;
+}
 
 /* 슬로건 */
 .slogan {
