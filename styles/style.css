@@ -1,28 +1,12 @@
 @import url(./normalize.css);
 @import url(./reset.css);
-@import url(./fonts.css);
 @import url(./fontello.css);
-
-/* 숨김 콘텐츠 */
-
-.a11y-hidden, legend {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0);
-}
 
 /* 기본 스타일 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
 }
 
 /* 링크 스타일 */
@@ -33,15 +17,12 @@ a {
 
 /* 본문 스타일 */
 body {
-  /* em, rem 단위를 사용해보기 */
-  font-size: 1.4rem;
   color: #212121;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  background: url(./images/bg_flower.png) no-repeat 50% 0,
-  #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%) repeat 0 0;
 }
 
 /* 레이아웃 */
@@ -56,258 +37,27 @@ body {
 
 /* 헤더 */
 .header {
-  background-color:#fff;
+  background: #fff;
   padding: 0 30px;
   border-radius: 0 0 15px 15px;
-  position: relative;
 }
 
-/* 로고 */
-.logo {
-  position: absolute;
-  top: 45px;
-  left: 60px;
-  z-index:10;
-}
-
-/* 텍스트 링크 모음 */
 .member {
-  text-align: right;
-  padding: 4px 0;
-  /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
-  /* position: relative;
-  right: -10px; */
-  /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
-  transform: translateX(10px);
-}
-
-.member li {
-  display: inline-block;
-}
-
-.member a {
-  padding: 6px 10px;
-  display: inherit;
-  text-transform: uppercase;
-}
-
-/* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding 값을 0으로 재정의 하는 방법 */
-/* .member li:last-child a {
-  padding-right: 0;
-} */
-
-.divider {
-  margin-right: 4px;
-}
-
-/* 메인 메뉴 */
-.navigation {
-  padding-bottom: 40px;
-}
-
-.menu {
-  border-top: 2px solid currentColor;
-  background: #e85e2c
-    linear-gradient(
-      to bottom,
-      #ef9126 0%,
-      #e85e2c 35%,
-      #e85e2c 70%,
-      #ef9126 100%
-    );
-  border-radius: 0 0 5px 5px;
-  padding-left: 230px;
-  height: 47px;
-  position: relative;
-}
-
-.menu > li:nth-child(-n + 3) {
-  position: relative;
-}
-
-.menu-item {
-  float: left;
-  border-left: 2px solid #fff;
-}
-
-/* 구체성 -> 10점 */
-.menu-button {
-  border: 0;
-  background: transparent;
-  padding: 0 23px;
-  line-height: 45px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
-}
-
-/* 구체성 -> 20점 */
-.is-active .menu-button {
-  color: #ff0;
-}
-
-.is-active .menu-button::after {
-  content: "";
-  display: block;
-  border-top: 2px solid #000;
-}
-
-.sub-menu {
-  position: absolute;
-  top: 47px;
-  padding:4px 0px;
-  display: none;
-}
-
-.menu-html,
-.menu-css,
-.menu-standards {
-  left: 0;
-}
-
-.menu-accessibility,
-.menu-qna,
-.menu-archive {
-  right: 0;
-}
-
-.is-active .sub-menu {
-  display: block;
-  white-space: nowrap;
-}
-
-.sub-menu li {
-  display: inline-block;
-}
-
-.sub-menu a::before{
-    content: '\e805'; 
-    font-family: 'fontello';
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.sub-menu a:hover::before,
-.sub-menu a:focus::before{
-  content: '\e801';
-}
-
-.sub-menu a{
-  display:inline-block;
-  padding:6px 0px;
-}
-
-.sub-menu a:hover,
-.sub-menu a:focus{
-  color:#f00;
+  background-color: pink;
 }
 
 /* 비주얼 */
-/* at sign rule */
-@-webkit-keyframes moveEffect{
-  0%{
-    font-size: 12px;
-    color: rgba(0,0,0,0.2);
-    transform:tranlate(0,0);
-  }
-  100%{
-    font-size: 24px;
-    color: rgba(0,0,0,1);
-    transform:translate(400px, 75px);
-  }
-}
-@keyframes moveEffect{
-  0%{
-    font-size: 12px;
-    color: rgba(0,0,0,0.2);
-    transform:tranlate(0,0);
-  }
-  100%{
-    font-size: 24px;
-    color: rgba(0,0,0,1);
-    transform:translate(400px, 75px);
-  }
-}
-
-@-webkit-keyframes fadeEffect{
-  0%{
-    opacity:1;
-  }
-
-  100%{
-    opacity:0;
-  }
-}
-
-@keyframes fadeEffect{
-  0%{
-    opacity:1;
-  }
-
-  100%{
-    opacity:0;
-  }
-}
-
 .visual {
   height: 120px;
-  position:relative;
 }
-
-.visual::before,
-.visual::after{
-  content:'';
-  position:absolute;
-  width: 100%;
-  height:100%;
-  top: 0;
-  left: 0;
-  -webkit-animation: fadeEffect 2000ms infinite alternate;
-          animation: fadeEffect 2000ms infinite alternate;
-}
-
-.visual::before{
-  background: url(./images/ani_flower_01.png) no-repeat 0 -10px,
-  url(./images/ani_flower_02.png) no-repeat 600px 0;
-}
-
-.visual::after{
-  background: url(./images/ani_flower_03.png) no-repeat 300px 0,
-  url(./images/ani_flower_04.png) no-repeat 800px 0;
-  -webkit-animation-delay:1000ms;
-          animation-delay:1000ms
-}
-
-.visual-text{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  position:relative;
-  -webkit-animation: moveEffect 400ms forwards ease-in-out;
-          animation: moveEffect 400ms forwards ease-in-out;
-}
-
 /* 메인 */
 .main {
   background: #fff;
   min-height: 450px;
   display: flow-root;
-  padding: 30px 15px;
-  border-radius:15px 15px 0 0;
 }
 
 .group {
-  margin: 0 15px;
   float: left;
 }
 
@@ -322,192 +72,17 @@ body {
   width: 190px;
 }
 
-/* 로그인 영역 */
-.login{
-  box-shadow: 5px 5px 0 0 #ccc;
-  background: orange radial-gradient(circle at right top, orange, orangered);
-  border-radius: 5px 5px 5px 5px;
-  padding:10px;
-}
-
-.login-title{
-  color:#ff0;
-  font-size: 15px;
-  font-weight: 700;
-  text-indent:10px;
-}
-
-.login-form{
-  background-color: #fff;
-  margin-top:10px;
-  border-radius:5px 5px 0 0;
-  padding:10px 10px 0 10px;
-}
-
-.login-form fieldset{
-  position:relative;
-  border-bottom:1px solid #aaa;
-  padding-bottom:5px;
-}
-.user-email,
-.user-pw{
-  margin-bottom:5px;
-}
-
-.login-form label{
-  display:inline-block;
-  width:4em;
-}
-
-.login-form input{
-  width: 90px;
-  height: 24px;
-  border:1px solid #aaa;
-  padding:1px 1px 1px 5px;
-  border-radius:3px;
-}
-
-.sign{
-  display:flex;
-  flex-flow: row nowrap;  
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  border-radius:0 0 5px 5px;
-  padding:4px 10px;
-}
-
-.sign a{
-  display:block;
-  padding:6px 0px;
-  letter-spacing: -1px;
-}
-
-.sign a::before{
-  content: '\e804'; 
-  font-family: 'fontello';
-  margin-right:8px;
-  color:orangered;
-}
-
-.login-button {
-  position:absolute;
-  top: 0;
-  right: 0;
-  height:53px;
-  background-color: orangered;
-  color:#fff;
-  border:0;
-  padding:0 8px;
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-/* 유효성 검사 배너 */
-.validation-list{
-  margin-top:25px;
-}
-
-.validation-list a:hover,
-.validation-list a:focus{
-  color:red;
-}
-
-.validation-list li{
-  margin-top:10px;
-}
-
-.validation-list a::before{
-  content: url(./images/validation_icon.png);
-  vertical-align: middle;
-}
-
-.validation-list a{
-  display:block;
-  border:1px solid #aaa;
-  border-radius: 30px;
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-  padding:8px 15px;
-  text-align: center;
-}
-
-/* 웹 관련 용어 */
-
-.term{
-  margin-top: 20px;
-  border:1px solid #aaa;
-  border-radius:5px;
-  padding:10px 15px;
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-}
-
-.term-title{
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.term-list{
-  margin-top: 10px;
-}
-
-.term-list div{
-  margin-top: 10px;
-  display:flow-root;
-}
-
-.term-list-subject,
-.term-list-brief{
-  float:right;
-  width: 145px;
-}
-
-.term-list-subject{
-  color:#296897;
-  font-weight: 500;
-}
-
-.term-list-thumbnail{
-  float:left;
-}
-
-.term-list-thumbnail img{
-  vertical-align:middle;
-}
-
-.term-list-brief{
-  margin-top: 5px;
-  line-height:1.5;
-}
-
-.cross .term-list-subject,
-.cross .term-list-brief{
-  float:left;
-}
-.cross .term-list-thumbnail{
-  float:right;
-}
-
-
-
-/* 검색 폼 */
-
-
-
-/* 공지사항 및 자료실 */
-
+/* 신규 이벤트 및 관련 사이트 */
 
 /* 슬로건 */
 .slogan {
   background: skyblue;
-  height: 10vh;
   clear: both;
 }
 /* 푸터 */
 .footer {
-  background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
+  background: gray;
 }
 .footer-inner {
   background: silver;
-  height: 15vh;
 }
